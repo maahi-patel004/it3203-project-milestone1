@@ -1,0 +1,17 @@
+<header>
+    <div class="site-title">
+        <h1>Understanding HTTP and the Modern Web</h1>
+        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+    </div>
+</header>
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-is-http.html">What Is HTTP?</a></li>
+        <li><a href="evolution.html">Evolution</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="key-concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
