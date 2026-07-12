@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Self-Assessment Quiz | IT 3203 HTTP Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="site-title">
+        <h1>Understanding HTTP and the Modern Web</h1>
+        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+    </div>
+</header>
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
+        <li><a href="evolution.html" class="">Evolution</a></li>
+        <li><a href="security.html" class="">Security</a></li>
+        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
+        <li><a href="quiz.html" class="active" aria-current="page">Quiz</a></li>
+        <li><a href="references.html" class="">References</a></li>
+        <li><a href="about.html" class="">About</a></li>
+    </ul>
+</nav>
+<main>
+    <section class="hero quiz-intro">
+        <h2>HTTP Self-Assessment Quiz</h2>
+        <p>Use this five-question quiz to check your understanding of HTTP terminology, request methods, status codes, and web security. Each question is worth one point. A score of 4 out of 5 or higher is required to pass.</p>
+    </section>
+
+    <!-- The form includes fill-in, single-choice, and multi-selection controls. -->
+    <form id="http-quiz" class="quiz-form" novalidate>
+        <fieldset class="question-card" id="question-1">
+            <legend><span class="question-number">1</span> Fill in the blank</legend>
+            <label for="q1">HTTP stands for:</label>
+            <input type="text" id="q1" name="q1" autocomplete="off" placeholder="Enter the full term">
+            <div class="question-feedback" id="feedback-q1" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="question-card" id="question-2">
+            <legend><span class="question-number">2</span> Multiple choice</legend>
+            <p>Which protocol secures HTTP communication by using encryption?</p>
+            <label class="option"><input type="radio" name="q2" value="HTTPX"> HTTPX</label>
+            <label class="option"><input type="radio" name="q2" value="FTP"> FTP</label>
+            <label class="option"><input type="radio" name="q2" value="HTTPS"> HTTPS</label>
+            <label class="option"><input type="radio" name="q2" value="SMTP"> SMTP</label>
+            <div class="question-feedback" id="feedback-q2" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="question-card" id="question-3">
+            <legend><span class="question-number">3</span> Multiple choice</legend>
+            <p>Which HTTP request method is normally used to retrieve data from a server?</p>
+            <label class="option"><input type="radio" name="q3" value="POST"> POST</label>
+            <label class="option"><input type="radio" name="q3" value="DELETE"> DELETE</label>
+            <label class="option"><input type="radio" name="q3" value="PUT"> PUT</label>
+            <label class="option"><input type="radio" name="q3" value="GET"> GET</label>
+            <div class="question-feedback" id="feedback-q3" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="question-card" id="question-4">
+            <legend><span class="question-number">4</span> Multiple choice</legend>
+            <p>Which HTTP status code means that a requested resource was not found?</p>
+            <label class="option"><input type="radio" name="q4" value="200"> 200</label>
+            <label class="option"><input type="radio" name="q4" value="301"> 301</label>
+            <label class="option"><input type="radio" name="q4" value="404"> 404</label>
+            <label class="option"><input type="radio" name="q4" value="500"> 500</label>
+            <div class="question-feedback" id="feedback-q4" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="question-card" id="question-5">
+            <legend><span class="question-number">5</span> Select all that apply</legend>
+            <p>Which of the following are HTTP request methods?</p>
+            <label class="option"><input type="checkbox" name="q5" value="GET"> GET</label>
+            <label class="option"><input type="checkbox" name="q5" value="POST"> POST</label>
+            <label class="option"><input type="checkbox" name="q5" value="PUT"> PUT</label>
+            <label class="option"><input type="checkbox" name="q5" value="DELETE"> DELETE</label>
+            <label class="option"><input type="checkbox" name="q5" value="HTML"> HTML</label>
+            <div class="question-feedback" id="feedback-q5" aria-live="polite"></div>
+        </fieldset>
+
+        <div class="quiz-actions">
+            <button type="submit" class="button primary-button">Submit Quiz</button>
+            <button type="button" id="reset-quiz" class="button secondary-button">Retake Quiz</button>
+        </div>
+    </form>
+
+    <!-- JavaScript inserts the overall pass/fail result and total score here. -->
+    <section id="quiz-summary" class="quiz-summary" aria-live="polite" tabindex="-1" hidden></section>
+</main>
+<div id="project-note">
+    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+</div>
+<footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
+</footer>
+</body>
+</html>
