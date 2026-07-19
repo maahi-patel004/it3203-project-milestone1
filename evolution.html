@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolution of HTTP | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>Evolution | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="active">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
-<h2 class="page-heading">Evolution of HTTP</h2><p>HTTP has changed as the web has grown from simple text pages into interactive applications. Early versions were simple and focused on transferring basic documents. Later versions improved speed, reliability, caching, and support for complex websites.</p><section class="grid"><article class="card"><h3>HTTP/0.9</h3><p>The earliest version was very limited and mainly supported simple document requests.</p></article><article class="card"><h3>HTTP/1.1</h3><p>This version added important improvements such as persistent connections, better caching, and virtual hosting.</p></article><article class="card"><h3>HTTP/2</h3><p>HTTP/2 improved performance by allowing multiple requests to share a single connection more efficiently.</p></article><article class="card"><h3>HTTP/3</h3><p>HTTP/3 uses QUIC, which is designed to improve speed and reliability, especially on unstable networks.</p></article></section><table><caption>Why HTTP Changed Over Time</caption><tr><th>Need</th><th>How HTTP Responded</th></tr><tr><td>More images and media</td><td>Improved connection handling and performance.</td></tr><tr><td>Dynamic web applications</td><td>Better support for APIs and structured communication.</td></tr><tr><td>Security concerns</td><td>Wider use of HTTPS to encrypt communication.</td></tr></table>
-</main>
-<div id="project-note">
-    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html" class="active" aria-current="page">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<h2 class="page-heading">Evolution of HTTP</h2>
+<section class="content-panel"><p>HTTP evolved as the web changed from a collection of simple documents into a platform for interactive applications, streaming, commerce, and real-time services. Each major version tried to reduce delay, use connections more efficiently, and support modern network conditions.</p></section>
+<section class="timeline">
+  <article><span>1991</span><div><h3>HTTP/0.9</h3><p>The original version supported a very simple GET request and returned only an HTML document. It did not include headers or status codes.</p></div></article>
+  <article><span>1996</span><div><h3>HTTP/1.0</h3><p>HTTP/1.0 introduced request and response headers, status codes, content types, and support for resources beyond HTML.</p></div></article>
+  <article><span>1997+</span><div><h3>HTTP/1.1</h3><p>Persistent connections became the default, reducing the need to create a new TCP connection for every resource. Host headers enabled multiple websites to share one server address, and caching controls became more capable.</p></div></article>
+  <article><span>2015</span><div><h3>HTTP/2</h3><p>HTTP/2 uses a binary framing layer and multiplexing so multiple request and response streams can share one connection. Header compression also reduces repeated metadata.</p></div></article>
+  <article><span>2022</span><div><h3>HTTP/3</h3><p>HTTP/3 maps HTTP semantics over QUIC instead of TCP. QUIC integrates transport security and reduces the effect of packet loss on unrelated streams, which can help on mobile or unstable networks.</p></div></article>
+</section>
+<div class="table-scroll" role="region" aria-label="Comparison of HTTP versions" tabindex="0">
+<table>
+  <caption>Comparison of Major HTTP Versions</caption>
+  <thead><tr><th scope="col">Version</th><th scope="col">Transport</th><th scope="col">Major Improvement</th><th scope="col">Limitation Addressed</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">HTTP/1.1</th><td>TCP</td><td>Persistent connections and improved caching</td><td>Repeated connection setup</td></tr>
+    <tr><th scope="row">HTTP/2</th><td>TCP</td><td>Multiplexing and header compression</td><td>Inefficient parallel requests</td></tr>
+    <tr><th scope="row">HTTP/3</th><td>QUIC over UDP</td><td>Independent streams and faster connection establishment</td><td>Transport-level head-of-line blocking</td></tr>
+  </tbody>
+</table>
 </div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+
+  </main>
+  <aside id="project-note">
+    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

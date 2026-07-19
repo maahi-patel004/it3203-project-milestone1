@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>About | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-    </ul>
-</nav>
-<main>
-<h2 class="page-heading">About the Student and Project</h2><section class="hero"><h3>Student Introduction</h3><p>My name is Maahi Patel, and this website was created for IT 3203 Introduction to Web Development. I am interested in technology because it supports communication, creativity, business, education, and modern career development. This project allows me to practice building a clean informational website using HTML and CSS.</p></section><section class="grid"><article class="card"><h3>Skills Demonstrated</h3><ul><li>Semantic HTML structure</li><li>Consistent navigation menu</li><li>CSS styling with one external stylesheet</li><li>Flexbox and CSS grid layout</li><li>Tables, lists, images, and links</li></ul></article><article class="card"><h3>Project Purpose</h3><p>The purpose of this project is to present research about HTTP in a web format and continue improving the site through future milestones with JavaScript and responsive design.</p></article><article class="card"><h3>Future Improvements</h3><p>In later milestones, this site can include a quiz app, mobile-friendly improvements, more complete research, and stronger user experience design.</p></article></section>
-</main>
-<div id="project-note">
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html" class="active" aria-current="page">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<h2 class="page-heading">About the Student and Project</h2>
+<section class="hero compact-hero"><div><h3>Student Introduction</h3><p>My name is Maahi Patel, and I created this website for IT 3203 Introduction to Web Development. The project combines research about HTTP with practical use of semantic HTML, external CSS, JavaScript, accessibility, and responsive design.</p></div></section>
+<section class="grid three-card-grid">
+  <article class="card"><h3>Project Goals</h3><ul><li>Explain HTTP with accurate, organized research</li><li>Create consistent navigation across all pages</li><li>Support desktop, tablet, and mobile screens</li><li>Build an interactive, accessible quiz</li></ul></article>
+  <article class="card"><h3>Technical Skills</h3><ul><li>Semantic HTML5 elements</li><li>CSS Grid and Flexbox</li><li>Media queries and fluid sizing</li><li>Responsive images and tables</li><li>JavaScript event handling and feedback</li></ul></article>
+  <article class="card"><h3>Responsive Strategy</h3><p>The site uses a fluid content container, flexible grids, a collapsible mobile menu, touch-friendly controls, scalable typography, and horizontally scrollable tables on narrow displays.</p></article>
+</section>
+<section class="content-panel"><h3>Milestone Progress</h3><p>Milestone 1 established the research site and shared visual design. Milestone 2 added the self-assessment quiz and corrected the footer layout. Milestone 3 finalizes the research and redesigns every page for responsive and mobile use.</p></section>
+
+  </main>
+  <aside id="project-note">
     This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
-</div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

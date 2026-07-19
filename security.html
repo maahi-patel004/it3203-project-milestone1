@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP and Security | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>Security | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="active">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
-<h2 class="page-heading">HTTP and Security</h2><p>Standard HTTP sends information in a readable form, which can create privacy and security risks. HTTPS improves this by using encryption through TLS. This helps protect logins, payment details, search activity, and other sensitive information while it travels between the browser and server.</p><p>Security is also connected to trust. Modern browsers often warn users when a site is not using HTTPS. For developers, using HTTPS is now a basic expectation for professional websites, even when the site does not collect highly sensitive information.</p><section class="grid"><article class="card"><h3>Confidentiality</h3><p>Encryption helps prevent outsiders from reading the data being transferred.</p></article><article class="card"><h3>Integrity</h3><p>HTTPS helps protect data from being changed during transmission.</p></article><article class="card"><h3>Authentication</h3><p>Certificates help users verify that they are communicating with the correct website.</p></article></section><div class="callout"><strong>Research note:</strong> Future milestones can expand this page with examples of TLS certificates, browser warnings, cookies, and privacy concerns.</div>
-</main>
-<div id="project-note">
-    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html" class="active" aria-current="page">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<h2 class="page-heading">HTTP, HTTPS, and Web Security</h2>
+<section class="hero compact-hero">
+  <div><h3>Why Plain HTTP Is Not Enough</h3><p>Plain HTTP does not encrypt the messages traveling across the network. Someone able to observe or alter the connection may read sensitive information or modify content. HTTPS protects the HTTP exchange by using Transport Layer Security (TLS).</p></div>
+</section>
+<section class="grid three-card-grid">
+  <article class="card"><h3>Confidentiality</h3><p>Encryption makes intercepted traffic difficult to understand without the session keys.</p></article>
+  <article class="card"><h3>Integrity</h3><p>TLS helps detect whether data was modified while moving between the client and server.</p></article>
+  <article class="card"><h3>Authentication</h3><p>Digital certificates help a browser verify that it is communicating with the intended domain.</p></article>
+</section>
+<section class="content-panel">
+  <h3>How an HTTPS Connection Is Established</h3>
+  <ol class="key-list">
+    <li>The client connects to the server and proposes supported TLS options.</li>
+    <li>The server sends its selected options and digital certificate.</li>
+    <li>The client validates the certificate's domain, signature, and validity period.</li>
+    <li>The parties establish shared session keys.</li>
+    <li>HTTP messages are exchanged through the encrypted TLS connection.</li>
+  </ol>
+</section>
+<div class="table-scroll" role="region" aria-label="HTTP and HTTPS comparison" tabindex="0">
+<table>
+  <caption>HTTP and HTTPS Comparison</caption>
+  <thead><tr><th scope="col">Feature</th><th scope="col">HTTP</th><th scope="col">HTTPS</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Encryption</th><td>No transport encryption</td><td>Encrypted with TLS</td></tr>
+    <tr><th scope="row">Typical URL scheme</th><td>http://</td><td>https://</td></tr>
+    <tr><th scope="row">Identity verification</th><td>No certificate validation</td><td>Uses digital certificates</td></tr>
+    <tr><th scope="row">Recommended use</th><td>Not recommended for public production sites</td><td>Standard for modern websites</td></tr>
+  </tbody>
+</table>
 </div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+<section class="callout"><strong>Important limitation:</strong> HTTPS protects data in transit, but it does not guarantee that a website is trustworthy or that the server stores information securely. Users and developers still need strong passwords, updates, access controls, and secure coding practices.</section>
+
+  </main>
+  <aside id="project-note">
+    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

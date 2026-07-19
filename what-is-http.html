@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Is HTTP | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>What Is Http | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="active">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html" class="active" aria-current="page">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
 <h2 class="page-heading">What Is HTTP?</h2>
-<div class="two-column"><section><p>HTTP is an application-layer protocol used to transfer web resources such as HTML files, images, videos, stylesheets, and scripts. It works through a request and response pattern. A browser sends a request asking for a resource, and the server sends back a response with the requested content or a message explaining what happened.</p><p>HTTP is important because it gives the web a shared communication format. Without a common protocol, browsers and servers would not know how to understand each other consistently. Developers use HTTP when building websites, connecting applications to APIs, testing web pages, and troubleshooting performance or security issues.</p></section><section class="callout"><h3>Simple Example</h3><p>When a user types a web address into a browser, the browser sends an HTTP request. The server responds with files such as HTML, CSS, JavaScript, and images. The browser then combines those files into the page the user sees.</p></section></div><table><caption>Parts of a Basic HTTP Exchange</caption><tr><th>Part</th><th>Description</th></tr><tr><td>Client</td><td>The browser or application making a request.</td></tr><tr><td>Server</td><td>The computer or service that stores and delivers resources.</td></tr><tr><td>Request</td><td>A message asking for an action, such as loading a page.</td></tr><tr><td>Response</td><td>The server message that returns content, status information, or an error.</td></tr></table>
-</main>
-<div id="project-note">
-    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+<section class="content-panel">
+  <p>HTTP is an application-layer protocol used to transfer representations of resources. A resource can be an HTML document, image, video, stylesheet, script, or data returned by an API. HTTP follows a client-server model: the client initiates a request, and the server returns a response.</p>
+  <div class="callout"><strong>Key idea:</strong> HTTP is stateless. Each request is interpreted independently unless state is added through mechanisms such as cookies, sessions, or authentication tokens.</div>
+</section>
+<section class="two-column">
+  <article class="card"><h3>1. The Client Creates a Request</h3><p>The browser reads a URL, determines the host and path, and sends a request. The request includes a method, target, protocol version, headers, and sometimes a body.</p></article>
+  <article class="card"><h3>2. The Server Processes It</h3><p>The server receives the message, checks routing and permissions, performs required application work, and prepares a response.</p></article>
+  <article class="card"><h3>3. The Server Responds</h3><p>The response contains a status code, response headers, and usually content. A 200 code commonly means success, while 404 means a resource was not found.</p></article>
+  <article class="card"><h3>4. The Client Renders the Result</h3><p>The browser interprets HTML and retrieves linked CSS, JavaScript, fonts, and images through additional requests.</p></article>
+</section>
+<section class="content-panel">
+  <h3>Example Request and Response</h3>
+  <pre><code>GET /articles/http HTTP/1.1
+Host: example.com
+Accept: text/html</code></pre>
+  <pre><code>HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1248</code></pre>
+</section>
+<div class="table-scroll" role="region" aria-label="Parts of an HTTP exchange" tabindex="0">
+<table>
+  <caption>Parts of a Basic HTTP Exchange</caption>
+  <thead><tr><th scope="col">Part</th><th scope="col">Purpose</th><th scope="col">Example</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Method</th><td>States the intended action.</td><td>GET, POST, PUT, DELETE</td></tr>
+    <tr><th scope="row">Target</th><td>Identifies the requested path or resource.</td><td>/products/42</td></tr>
+    <tr><th scope="row">Headers</th><td>Carry metadata about the message.</td><td>Content-Type: application/json</td></tr>
+    <tr><th scope="row">Status</th><td>Summarizes the response result.</td><td>200 OK</td></tr>
+    <tr><th scope="row">Body</th><td>Contains submitted or returned data.</td><td>HTML or JSON</td></tr>
+  </tbody>
+</table>
 </div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+
+  </main>
+  <aside id="project-note">
+    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>References and Resources | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>References | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="active">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
-<h2 class="page-heading">References and Learning Resources</h2><p>The references below support the research used in this project and provide reliable learning resources for future milestones.</p><ul class="resource-list"><li>MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview">Overview of HTTP</a>.</li><li>MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP: Hypertext Transfer Protocol</a>.</li><li>MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a>.</li><li>RFC Editor. <a href="https://www.rfc-editor.org/info/rfc9110/">RFC 9110: HTTP Semantics</a>.</li><li>HTTP Working Group. <a href="https://httpwg.org/specs/">HTTP Documentation and Specifications</a>.</li><li>MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works">How the web works</a>.</li></ul><div class="callout"><p><strong>Class link:</strong> <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a></p></div>
-</main>
-<div id="project-note">
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html" class="active" aria-current="page">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<h2 class="page-heading">References and Research Resources</h2>
+<section class="content-panel"><p>The research was finalized using standards documents and educational resources maintained by recognized web organizations. Access dates are included for web resources.</p></section>
+<ol class="resource-list bibliography">
+  <li><strong>Fielding, R., Nottingham, M., and Reschke, J.</strong> “HTTP Semantics.” RFC 9110, Internet Engineering Task Force, June 2022. <a href="https://www.rfc-editor.org/rfc/rfc9110">RFC Editor</a>.</li>
+  <li><strong>Thomson, M. and Benfield, B.</strong> “HTTP/2.” RFC 9113, Internet Engineering Task Force, June 2022. <a href="https://www.rfc-editor.org/rfc/rfc9113">RFC Editor</a>.</li>
+  <li><strong>Bishop, M.</strong> “HTTP/3.” RFC 9114, Internet Engineering Task Force, June 2022. <a href="https://www.rfc-editor.org/rfc/rfc9114">RFC Editor</a>.</li>
+  <li><strong>Mozilla Developer Network.</strong> “An Overview of HTTP.” MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN</a>. Accessed July 19, 2026.</li>
+  <li><strong>Mozilla Developer Network.</strong> “HTTP Request Methods.” MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">MDN</a>. Accessed July 19, 2026.</li>
+  <li><strong>Mozilla Developer Network.</strong> “HTTP Response Status Codes.” MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN</a>. Accessed July 19, 2026.</li>
+  <li><strong>Cloudflare.</strong> “What Is HTTPS?” Cloudflare Learning Center. <a href="https://www.cloudflare.com/learning/ssl/what-is-https/">Cloudflare</a>. Accessed July 19, 2026.</li>
+  <li><strong>World Wide Web Consortium.</strong> “Web Accessibility Initiative: Mobile Accessibility.” <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">W3C WAI</a>. Accessed July 19, 2026.</li>
+  <li><strong>web.dev.</strong> “Responsive Web Design Basics.” <a href="https://web.dev/articles/responsive-web-design-basics">web.dev</a>. Accessed July 19, 2026.</li>
+</ol>
+<section class="callout"><strong>Research organization:</strong> The content is divided into definition and process, protocol evolution, security, and key technical concepts. This structure moves from foundational ideas to more specialized topics.</section>
+
+  </main>
+  <aside id="project-note">
     This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
-</div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

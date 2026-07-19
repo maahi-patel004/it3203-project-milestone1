@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>Index | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
-<section class="hero">
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html" class="active" aria-current="page">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<section class="hero split-hero">
+  <div>
+    <p class="eyebrow">Research Topic</p>
     <h2>HTTP: The Communication System Behind the Web</h2>
-    <p>HTTP, or Hypertext Transfer Protocol, is the set of rules that allows browsers and web servers to exchange information. Every time a user opens a website, submits a form, loads an image, or watches a video online, HTTP helps organize the request and response process. This site introduces HTTP, explains how it has evolved, and highlights why it remains important for modern web development.</p>
-    <p>The goal of this project is to present research in a clear website format using HTML and CSS. This first milestone focuses on structure, clean design, and basic content that can be expanded in later milestones.</p>
+    <p>Hypertext Transfer Protocol (HTTP) defines how clients and servers exchange web resources. When a person opens a page, submits a form, streams media, or uses a web application, HTTP organizes the request-and-response conversation.</p>
+    <p>This project explains HTTP's purpose, message structure, methods, status codes, evolution, performance, and relationship to HTTPS. The design is responsive so the same content remains usable on desktop, tablet, and mobile screens.</p>
+    <a class="button-link" href="what-is-http.html">Start the research</a>
+  </div>
+  <img class="responsive-img" src="http-diagram.svg" alt="Browser sending an HTTP request to a server and receiving a response">
 </section>
-<section class="grid">
-    <article class="card"><h3>Key Terms</h3><ul><li>Client</li><li>Server</li><li>Request</li><li>Response</li><li>Status Code</li><li>HTTPS</li></ul></article>
-    <article class="card"><h3>Table of Contents</h3><ol><li><a href="what-is-http.html">What Is HTTP?</a></li><li><a href="evolution.html">Evolution of HTTP</a></li><li><a href="security.html">HTTP and Security</a></li><li><a href="key-concepts.html">Key Concepts</a></li><li><a href="references.html">References and Resources</a></li><li><a href="about.html">About the Project</a></li></ol></article>
-    <article class="card"><h3>Research Focus</h3><p>This website focuses on how HTTP supports web browsing, APIs, performance, security, and the structure of modern web communication.</p></article>
+<section aria-labelledby="overview-heading">
+  <h2 id="overview-heading" class="page-heading">Research Overview</h2>
+  <div class="grid three-card-grid">
+    <article class="card"><h3>Core Process</h3><p>A client identifies a resource with a URL, sends an HTTP request, and receives a response containing a status code, headers, and often a message body.</p></article>
+    <article class="card"><h3>Modern Importance</h3><p>HTTP supports ordinary webpages, REST APIs, cloud services, mobile apps, streaming platforms, and many Internet of Things systems.</p></article>
+    <article class="card"><h3>Security Context</h3><p>HTTPS combines HTTP with TLS encryption so information is protected while traveling between a client and server.</p></article>
+  </div>
 </section>
-<img class="responsive-img" src="http-diagram.svg" alt="Diagram showing HTTP request and response between a browser and a web server">
-</main>
-<div id="project-note">
+<section class="content-panel">
+  <h2>Explore the Site</h2>
+  <ol class="link-grid">
+    <li><a href="what-is-http.html"><strong>What Is HTTP?</strong><span>Requests, responses, URLs, and message structure</span></a></li>
+    <li><a href="evolution.html"><strong>Evolution</strong><span>HTTP/0.9 through HTTP/3</span></a></li>
+    <li><a href="security.html"><strong>Security</strong><span>HTTPS, TLS, certificates, and safe practices</span></a></li>
+    <li><a href="key-concepts.html"><strong>Key Concepts</strong><span>Methods, status codes, headers, caching, and cookies</span></a></li>
+    <li><a href="quiz.html"><strong>Quiz</strong><span>Test your understanding with immediate feedback</span></a></li>
+    <li><a href="references.html"><strong>References</strong><span>Standards and major research resources</span></a></li>
+  </ol>
+</section>
+
+  </main>
+  <aside id="project-note">
     This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
-</div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>

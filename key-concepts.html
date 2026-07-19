@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Concepts | IT 3203 HTTP Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student research website explaining HTTP, HTTPS, web communication, and modern protocol versions.">
+  <title>Key Concepts | IT 3203 HTTP Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js" defer></script>
 </head>
 <body>
-<header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
     <div class="site-title">
-        <h1>Understanding HTTP and the Modern Web</h1>
-        <p>An IT 3203 research website about the protocol that powers web communication.</p>
+      <p class="eyebrow">IT 3203 Web Development Project</p>
+      <h1>Understanding HTTP and the Modern Web</h1>
+      <p>An accessible, responsive research website about the protocol that powers web communication.</p>
     </div>
-</header>
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="what-is-http.html" class="">What Is HTTP?</a></li>
-        <li><a href="evolution.html" class="">Evolution</a></li>
-        <li><a href="security.html" class="">Security</a></li>
-        <li><a href="key-concepts.html" class="active">Key Concepts</a></li>
-        <li><a href="quiz.html" class="">Quiz</a></li>
-        <li><a href="references.html" class="">References</a></li>
-        <li><a href="about.html" class="">About</a></li>
-    </ul>
-</nav>
-<main>
-<h2 class="page-heading">Key Concepts</h2><p>The concepts below are important for understanding how HTTP works in real websites and applications.</p><ol class="key-list"><li><strong>Client-server model:</strong> A client sends requests, and a server returns responses.</li><li><strong>URL:</strong> A web address that identifies where a resource is located.</li><li><strong>HTTP methods:</strong> Actions such as GET, POST, PUT, and DELETE that describe the purpose of a request.</li><li><strong>Status codes:</strong> Numbered messages such as 200, 404, and 500 that summarize the result of a request.</li><li><strong>Headers:</strong> Extra information sent with requests and responses, such as content type or caching instructions.</li><li><strong>Caching:</strong> A way to store copies of resources so pages can load faster and reduce server work.</li><li><strong>HTTPS:</strong> The secure version of HTTP that uses encryption to protect data.</li></ol><table><caption>Common Status Codes</caption><tr><th>Status Code</th><th>Meaning</th></tr><tr><td>200 OK</td><td>The request succeeded.</td></tr><tr><td>301 Moved Permanently</td><td>The resource has a new permanent location.</td></tr><tr><td>404 Not Found</td><td>The requested resource could not be found.</td></tr><tr><td>500 Internal Server Error</td><td>The server had a problem completing the request.</td></tr></table>
-</main>
-<div id="project-note">
-    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="primary-menu"><li><a href="index.html">Home</a></li>
+<li><a href="what-is-http.html">What Is HTTP?</a></li>
+<li><a href="evolution.html">Evolution</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="key-concepts.html" class="active" aria-current="page">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li></ul>
+    </div>
+  </nav>
+  <main id="main-content">
+
+<h2 class="page-heading">Key HTTP Concepts</h2>
+<section class="content-panel"><p>Understanding the following concepts makes it easier to read browser developer tools, design APIs, troubleshoot websites, and reason about web performance.</p></section>
+<section class="grid concept-grid">
+  <article class="card"><h3>URLs</h3><p>A URL can contain a scheme, host, port, path, query string, and fragment. Together these parts identify how and where a resource should be accessed.</p></article>
+  <article class="card"><h3>Methods</h3><p>GET retrieves a representation, POST submits data, PUT replaces or creates a resource, PATCH applies a partial change, and DELETE requests removal.</p></article>
+  <article class="card"><h3>Status Codes</h3><p>Codes are grouped by class: 1xx informational, 2xx successful, 3xx redirection, 4xx client error, and 5xx server error.</p></article>
+  <article class="card"><h3>Headers</h3><p>Headers carry metadata such as content type, accepted formats, authentication information, cache rules, and cookie instructions.</p></article>
+  <article class="card"><h3>Caching</h3><p>Caching can reduce repeated downloads. Cache-Control, validators such as ETag, and conditional requests help determine whether stored content can be reused.</p></article>
+  <article class="card"><h3>Cookies and Sessions</h3><p>Servers can ask browsers to store small cookie values. Cookies may support sessions, preferences, and authentication, but require careful security and privacy controls.</p></article>
+  <article class="card"><h3>Content Negotiation</h3><p>A client can describe acceptable media types or languages, and the server may select an appropriate representation.</p></article>
+  <article class="card"><h3>APIs and JSON</h3><p>Many web APIs use HTTP methods and status codes while exchanging JSON data rather than complete HTML pages.</p></article>
+</section>
+<div class="table-scroll" role="region" aria-label="Common HTTP status codes" tabindex="0">
+<table>
+  <caption>Common HTTP Status Codes</caption>
+  <thead><tr><th scope="col">Code</th><th scope="col">Meaning</th><th scope="col">Typical Situation</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">200</th><td>OK</td><td>The request succeeded.</td></tr>
+    <tr><th scope="row">201</th><td>Created</td><td>A new resource was created.</td></tr>
+    <tr><th scope="row">301</th><td>Moved Permanently</td><td>The resource has a new permanent URL.</td></tr>
+    <tr><th scope="row">400</th><td>Bad Request</td><td>The request is malformed or invalid.</td></tr>
+    <tr><th scope="row">401</th><td>Unauthorized</td><td>Authentication is required or failed.</td></tr>
+    <tr><th scope="row">404</th><td>Not Found</td><td>The requested resource could not be located.</td></tr>
+    <tr><th scope="row">500</th><td>Internal Server Error</td><td>The server encountered an unexpected problem.</td></tr>
+  </tbody>
+</table>
 </div>
-<footer>
-    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #2</p>
-</footer>
+
+  </main>
+  <aside id="project-note">
+    This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Introduction to Web Development</a> at Kennesaw State University.
+  </aside>
+  <footer>
+    <p>&copy; 2026 Maahi Patel | IT 3203 Project Milestone #3</p>
+  </footer>
 </body>
 </html>
